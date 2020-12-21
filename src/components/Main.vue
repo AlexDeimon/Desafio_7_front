@@ -10,7 +10,6 @@
             <nav class="navegador">
                 <button class="boton" @click="$router.push('/home')">Home</button>
                 <button class="boton" @click="$router.push('/cliente')">Clientes</button>
-                <!--<router-link class="boton" to="/producto">Productos</router-link>-->
                 <button class="boton" @click="$router.push('/producto')">Productos</button>
                 <button class="boton" @click="$router.push('/compra')">Compras</button>
                 <button class="boton bg-danger" onclick="location.href='../index.html'" >Salir</button>
@@ -18,8 +17,10 @@
             <router-view/>
         </section>
     </div>
+    <footer class="footer"> 
+        <p> G1M1E3 MisionTic2020</p>
+    </footer>
 </div>
-    <!--<footer class="footer"> <p> Hecho con 💚 por   <a href="https://github.com/RingilDeveloper"> RingilDeveloper</a> </p></footer>-->
 </template>
 
 <script>

@@ -17,6 +17,7 @@
       <input type="text" v-model='compra.precio_compra' placeholder="Precio"  >
 
       <button class="btn btn-success" v-on:click="crearCompra" >Agregar</button>
+      <button class="btn btn-success" v-on:click="mostrarCompras" >Ver Compras</button>
     </div>
         <div class="table">
           <table>

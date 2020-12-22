@@ -85,12 +85,14 @@ export default {
         var compra = this.compra;
         axios.post('https://desafio-7.herokuapp.com/purchase/search/', compra)
         .then((response) => {
-          this
+          this.compra = response.data
             console.log(response, compra);
         })
         .catch(function (error) {
           console.log(error);
+          alert("La compra no existe")
         });
+        console.log(this.compra)
       },
 
       crearCompra(){
@@ -100,7 +102,7 @@ export default {
         .then((response) => {
           this
             console.log(response, compra);
-
+            alert("Se ha añadido la compra")
         })
         .catch(function (error) {
           console.log(error);

@@ -75,12 +75,14 @@ export default {
         var producto = this.producto;
         axios.post('https://desafio-7.herokuapp.com/product/search/', producto)
         .then((response) => {
-          this
+          this.producto = response.data
             console.log(response, producto);
         })
         .catch(function (error) {
           console.log(error);
+           alert("El producto no existe")
         });
+        console.log(this.producto)
       },
 
       crearProducto(){
@@ -90,7 +92,7 @@ export default {
         .then((response) => {
           this
             console.log(response, producto);
-
+            alert("Se ha añadido el producto")
         })
         .catch(function (error) {
           console.log(error);
@@ -104,7 +106,7 @@ export default {
         .then((response) => {
           this
             console.log(response, producto);
-
+            alert("El producto se ha actualizado")
         })
         .catch(function (error) {
           console.log(error);
@@ -118,10 +120,11 @@ export default {
         .then((response) => {
           this
             console.log(response, producto);
-
+            alert("El producto se ha eliminado")
         })
         .catch(function (error) {
           console.log(error);
+          alert("El producto no existe")
         });
       }
     }

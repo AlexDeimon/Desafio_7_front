@@ -79,12 +79,14 @@ export default {
         var cliente = this.cliente;
         axios.post('https://desafio-7.herokuapp.com/client/search/', cliente)
         .then((response) => {
-          this.cliente_list = response.data
+          this.cliente = response.data
             console.log(response, cliente);
         })
         .catch(function (error) {
           console.log(error);
+          alert("El cliente no existe")
         });
+        console.log(this.cliente)
       },
 
       crearCliente(){
@@ -94,7 +96,7 @@ export default {
         .then((response) => {
           this
             console.log(response, cliente);
-
+            alert("Se ha añadido el cliente")
         })
         .catch(function (error) {
           console.log(error);
@@ -108,7 +110,7 @@ export default {
         .then((response) => {
           this
             console.log(response, cliente);
-
+            alert("El cliente se ha actualizado")
         })
         .catch(function (error) {
           console.log(error);
@@ -122,12 +124,18 @@ export default {
         .then((response) => {
           this
             console.log(response, cliente);
-
+            alert("El cliente se ha eliminado")
         })
         .catch(function (error) {
           console.log(error);
+          alert("El cliente no existe")
         });
       }
     }
 }
 </script>
+<style>
+.btn-success{
+  margin-left: 10px;
+}
+</style>

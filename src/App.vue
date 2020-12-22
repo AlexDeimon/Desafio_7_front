@@ -5,7 +5,7 @@
         <header class="header container-xl p-3">
             <h1 class=" title  h1 text-white"> <strong><span class="text-warning">Business</span> Flow</strong> </h1>
         </header>
-      </div>
+    </div>
         <div class="container_auth_user">
             <h2>Autenticarse</h2>
             <form v-on:submit.prevent="processAuthUser" >
